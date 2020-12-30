@@ -28,3 +28,25 @@ body {
   height: 70px;
   background: url(/assets/images/login_title.png) no-repeat center;
 }
+
+.layui-form-item {
+  position: relative;
+
+  margin: 20px 40px;
+}
+.layui-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.a-login,
+.a-reg {
+  display: flex;
+  justify-content: flex-end;
+}
+.layui-input {
+  padding-left: 32px;
+}
+.reg-box {
+  display: none;
+}

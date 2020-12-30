@@ -9,6 +9,7 @@ $(function () {
   })
   const form = layui.form
   const layer = layui.layer
+  //设置自定义表单验证
   form.verify({
     pwd: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
     repwd: function (value) {
@@ -27,7 +28,7 @@ $(function () {
     console.log(data)
     $.ajax({
       method: 'POST',
-      url: 'http://ajax.frontend.itheima.net/api/reguser',
+      url: '/api/reguser',
       data,
       success(res) {
         if (res.status !== 0) {
@@ -46,7 +47,7 @@ $(function () {
     let data = $(this).serialize()
     $.ajax({
       method: 'POST',
-      url: 'http://ajax.frontend.itheima.net/api/login',
+      url: '/api/login',
       data,
       success(res) {
         if (res.status !== 0) {

@@ -54,7 +54,7 @@ $(function () {
           return layer.msg('登陆失败,请检查用户名或密码')
         }
         layer.msg('登陆成功')
-        console.log(res.token)
+        // console.log(res.token)
         localStorage.setItem('token', res.token)
         location.href = '/index.html'
       }

@@ -1,6 +1,13 @@
 $(function () {
   const layer = layui.layer
   getUserInfo()
+  $('.login-out').click(function () {
+    layer.confirm('确定要退出吗?', { icon: 3, title: '提示' }, function (index) {
+      //do something
+      location.href = '/login.html'
+      layer.close(index)
+    })
+  })
 })
 function getUserInfo() {
   $.ajax({

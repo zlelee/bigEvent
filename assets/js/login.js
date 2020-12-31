@@ -46,14 +46,15 @@ $(function () {
     e.preventDefault()
     let data = $(this).serialize()
     $.ajax({
-      method: 'POST',
       url: '/api/login',
+      method: 'POST',
       data,
       success(res) {
         if (res.status !== 0) {
           return layer.msg('登陆失败,请检查用户名或密码')
         }
         layer.msg('登陆成功')
+        console.log(res.token)
         localStorage.setItem('token', res.token)
         location.href = '/index.html'
       }
